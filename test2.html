@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa Especial</title>
+</head>
+<body style="margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: black;">
+    <button id="startButton" style="padding: 20px 50px; font-size: 22px; cursor: pointer; border: none; background-color: red; color: white; border-radius: 15px; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); transition: transform 0.3s;">
+        Aperte aqui
+    </button>
+    
+    <div id="content" style="display: none; width: 100%; height: 100vh; background-image: url('https://ia803402.us.archive.org/33/items/nos_20240916/nos.jpg'); background-size: cover; background-position: center; text-align: center; color: red;">
+        <h1 style="margin-top: 150%; font-size: 50px;">Feliz 4 meses</h1>
+        <h2 style="margin-top: 30px; font-size: 30px;">Te Amo!</h2>
+    </div>
+
+    <audio id="audio" src="https://ia903401.us.archive.org/8/items/e-por-voce-que-canto-the-sounds-of-silence-NS9xi3JwJqc/e-por-voce-que-canto-the-sounds-of-silence-NS9xi3JwJqc.mp3"></audio>
+
+    <script>
+        document.getElementById('startButton').addEventListener('mouseover', function() {
+            this.style.transform = 'scale(1.1)';
+        });
+
+        document.getElementById('startButton').addEventListener('mouseout', function() {
+            this.style.transform = 'scale(1)';
+        });
+
+        document.getElementById('startButton').addEventListener('click', function() {
+            // Toca a música
+            var audio = document.getElementById('audio');
+            audio.play();
+            
+            // Exibe o conteúdo com a imagem e as frases
+            document.getElementById('startButton').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
